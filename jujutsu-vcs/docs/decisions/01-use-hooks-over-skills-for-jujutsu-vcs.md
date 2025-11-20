@@ -22,6 +22,13 @@ Large language models have no persistent memory—they only see the current cont
 - **Skills are invoked mid-conversation**: Claude must recognize a task involves VCS operations and decide to invoke the skill. By the time Claude starts writing commands, it may have forgotten the context, or never recognized the situation as VCS-related.
 - **Hooks are always present at start**: Context injected via SessionStart hooks is guaranteed to be visible in every session from the beginning, before any task analysis occurs.
 
+### The Git Training Bias
+
+LLMs are overwhelmingly trained on `git` usage. When a user requests a VCS operation (e.g., "commit these changes"), the model's statistical probability heavily favors generating `git commit`.
+
+- **Resistance to Skills**: A Skill requires the model to pause, reflect ("I should check for a different VCS tool"), and deviate from its strongest training pathway. This is prone to failure.
+- **Proactive Override**: A Hook acts as a "billboard" in the context window, altering the ground rules before the model forms its first thought, effectively preempting the default `git` behavior.
+
 ### Precedent from Official Plugins
 
 The official Claude Code plugins follow a clear pattern:
@@ -82,6 +89,8 @@ Create a Jujutsu best-practices skill that Claude invokes as needed.
 **Cons:**
 - **Unreliable**: LLM must recognize VCS tasks and invoke skill mid-conversation
 - **Forgetful**: By task execution time, LLM may have forgotten to check skills
+- **High Friction**: Fighting the model's "muscle memory" for `git` requires constant correction
+- **Unnecessary Abstraction**: Wrapping a CLI tool in a Skill is "tool bloat" when the user simply wants to run shell commands
 - **Token overhead**: Every VCS operation triggers skill invocation
 - **No guarantee**: Entirely dependent on model's judgment at specific moments
 - **Pattern mismatch**: Official plugins don't use this for persistent context
@@ -140,6 +149,8 @@ Rely on project-level CLAUDE.md configuration to remind Claude about Jujutsu.
 **Why hooks over skills?**
 
 LLMs work with context, not memory. When reliability matters (critical operations like VCS), the context must be present from the session start, not discovered mid-task. Hooks provide this guarantee. Skills work better for optional, decision-based capabilities, not for persistent constraints.
+
+Additionally, Hooks are **proactive** while Skills are **reactive**. To overcome the strong training bias towards `git`, we must intervene before the model attempts to solve the problem.
 
 **Why this beats alternatives?**
 
