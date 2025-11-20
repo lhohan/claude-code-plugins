@@ -8,8 +8,5 @@
   },
   "license": "MIT",
   "keywords": ["jujutsu", "vcs", "version-control", "jj"],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lhohan/claude-code-plugins"
-  }
+  "repository": "https://github.com/lhohan/claude-code-plugins"
 }
