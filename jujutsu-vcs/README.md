@@ -11,23 +11,34 @@ This plugin provides the most reliable way I have found to instruct Claude Code 
 
 ## Installation
 
-### Using Claude Code Plugin Manager
+### Using Claude Code Plugin Manager (Recommended)
 
-```bash
-/plugin marketplace add https://github.com/lhohan/claude-code-plugins/
-```
-
-### Manual Installation
-
-1. Clone the repository:
+1. Add the marketplace:
    ```bash
-   git clone https://github.com/yourusername/claude-code-plugins.git
-   cd claude-code-plugins/jujutsu-vcs
+   /plugin marketplace add lhohan/claude-code-plugins
    ```
 
 2. Install the plugin:
    ```bash
-   /plugin install ./
+   /plugin install jujutsu-vcs@claude-code-plugins
+   ```
+
+### Manual Installation (Local Development)
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/lhohan/claude-code-plugins.git
+   cd claude-code-plugins
+   ```
+
+2. Add the local marketplace:
+   ```bash
+   /plugin marketplace add ./
+   ```
+
+3. Install the plugin:
+   ```bash
+   /plugin install jujutsu-vcs@claude-code-plugins
    ```
 
 ## Usage

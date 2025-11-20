@@ -1,0 +1,25 @@
+{
+  "name": "claude-code-plugins",
+  "owner": {
+    "name": "Hans L'Hoest",
+    "email": "2922363+lhohan@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "A curated collection of reusable plugins for Claude Code to enhance your development workflow",
+    "version": "1.0.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/lhohan/claude-code-plugins"
+    }
+  },
+  "plugins": [
+    {
+      "name": "jujutsu-vcs",
+      "source": "./jujutsu-vcs",
+      "description": "SessionStart hook that ensures Claude Code uses Jujutsu (jj) commands instead of git in Jujutsu repositories",
+      "version": "1.0.0",
+      "keywords": ["jujutsu", "vcs", "version-control", "jj"],
+      "category": "version-control"
+    }
+  ]
+}
