@@ -20,6 +20,14 @@
       "version": "1.0.0",
       "keywords": ["jujutsu", "vcs", "version-control", "jj"],
       "category": "version-control"
+    },
+    {
+      "name": "skill-evaluator",
+      "source": "./skill-evaluator",
+      "description": "Evaluate Claude Code skills against best practices including size, structure, examples, and prompt engineering quality. Provides comprehensive analysis with actionable suggestions.",
+      "version": "0.1.0",
+      "keywords": ["skill", "evaluation", "quality-assurance", "best-practices", "code-review"],
+      "category": "development"
     }
   ]
 }

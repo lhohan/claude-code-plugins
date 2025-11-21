@@ -1,0 +1,12 @@
+{
+  "name": "skill-evaluator",
+  "description": "Evaluate Claude Code skills against best practices including size, structure, examples, and prompt engineering quality. Provides comprehensive analysis with actionable suggestions.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Hans L'Hoest",
+    "email": "2922363+lhohan@users.noreply.github.com"
+  },
+  "license": "MIT",
+  "keywords": ["skill", "evaluation", "quality-assurance", "best-practices", "code-review"],
+  "repository": "https://github.com/lhohan/claude-code-plugins"
+}
