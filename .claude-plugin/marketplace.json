@@ -1,11 +1,11 @@
 {
-  "name": "claude-code-plugins",
+  "name": "hanlho-plugins",
   "owner": {
     "name": "Hans L'Hoest",
     "email": "2922363+lhohan@users.noreply.github.com"
   },
   "metadata": {
-    "description": "A curated collection of reusable plugins for Claude Code to enhance your development workflow",
+    "description": "Hanlho's collection of reusable plugins for Claude Code to enhance your development workflow. Geared towards architecture and code quality.",
     "version": "1.0.0",
     "repository": {
       "type": "git",
