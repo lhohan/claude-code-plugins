@@ -4,7 +4,8 @@ This plugin provides the most reliable way I have found to instruct Claude Code 
 
 ## Features
 
-- **SessionStart Hook**: Automatically reminds Claude to use `jj` commands
+- **SessionStart Hook**: Automatically reminds Claude to use `jj` commands at session start
+- **Manual Command**: `/use-jj` command for on-demand context injection (fallback if hooks fail)
 - **Repository-Aware**: Only activates in actual Jujutsu repositories (checks for `.jj/` directory)
 - **Reliable**: Uses context injection instead of skill invocation for guaranteed execution
 - **Reference Guide**: Includes common `jj` commands for quick reference
@@ -43,6 +44,8 @@ This plugin provides the most reliable way I have found to instruct Claude Code 
 
 ## Usage
 
+### Automatic Context Injection (SessionStart Hook)
+
 Once installed, the plugin automatically activates when you enter a Jujutsu repository:
 
 ```bash
@@ -51,6 +54,16 @@ claude
 ```
 
 Claude will receive a reminder to use `jj` commands in all subsequent operations.
+
+### Manual Context Injection (Command)
+
+If the SessionStart hook doesn't trigger for some reason, you can manually inject the same context by running:
+
+```
+/use-jj
+```
+
+This provides an alternative way to get the Jujutsu context reminder within the same session.
 
 ## Optional: add extra layer
 
