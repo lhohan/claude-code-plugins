@@ -28,6 +28,14 @@
       "version": "0.1.0",
       "keywords": ["skill", "evaluation", "quality-assurance", "best-practices", "code-review"],
       "category": "development"
+    },
+    {
+      "name": "hanlho-cmds",
+      "source": "./hanlho-cmds",
+      "description": "Curated most useful & frequently used Claude Code commands for Claude development and workflow automation",
+      "version": "0.1.0",
+      "keywords": ["productivity", "workflow", "automation", "development", "commands"],
+      "category": "productivity"
     }
   ]
 }

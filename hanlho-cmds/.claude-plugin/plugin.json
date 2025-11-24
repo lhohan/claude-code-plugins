@@ -1,0 +1,17 @@
+{
+  "name": "hanlho-cmds",
+  "description": "Curated most useful & frequently used Claude Code commands for Claude development and workflow automation",
+  "version": "0.1.0",
+  "author": {
+    "name": "Hans L'Hoest (hanlho)"
+  },
+  "keywords": [
+    "productivity",
+    "workflow",
+    "automation",
+    "development",
+    "commands"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/your-username/claude-code-plugins"
+}
