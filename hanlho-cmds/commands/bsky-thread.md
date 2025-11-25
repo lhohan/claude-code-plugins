@@ -46,17 +46,17 @@ The user input below is either a file path or raw text:
 ## Example Output Format
 
 ```
-=� This will create 2 messages for your Bluesky thread:
+📊 This will create 2 messages for your Bluesky thread:
 
- Message 1/2 
+━━━ Message 1/2 ━━━
 [1/2] Your first message text here that fits within 300 characters. This is the content that will be posted as the first message in the thread.
 
- Message 2/2 
+━━━ Message 2/2 ━━━
 [2/2] Your second message continues the thread. Make sure the content flows naturally from the first message and maintains the overall tone.
 
-=� Suggested improvements:
+💡 Suggested improvements:
 - Consider a line break earlier in message 1 for better pacing
-- Message 2: "continues the thread" � "continues naturally" (slightly more concise)
+- Message 2: "continues the thread" → "continues naturally" (slightly more concise)
 ```
 
 Now proceed with splitting the user's text according to these instructions.
