@@ -10,6 +10,14 @@ This plugin provides the most reliable way I have found to instruct Claude Code 
 - **Reliable**: Uses context injection instead of skill invocation for guaranteed execution
 - **Reference Guide**: Includes common `jj` commands for quick reference
 
+## Is it working?
+
+To test if the plugin is working, ask the LLM:
+
+```bash
+State the version control system you will be using for this session.
+```
+
 ## Installation
 
 ### Using Claude Code Plugin Manager (Recommended)

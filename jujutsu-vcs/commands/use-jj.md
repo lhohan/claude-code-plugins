@@ -6,6 +6,8 @@ description: Inject Jujutsu VCS context and instructions
 - Check status: `jj st --no-pager`
 - View history: `jj log --no-pager`
 - Create commit: `jj commit -m "message"`
+- Only commit related changes: `jj commit -m "message"` [FILESETS]
+  - NEVER restore files to exclude them from a commit.
 - Push: `jj git push`
 - Push main: `jj bookmark set main -r @- && jj git push`
 - Undo last jj command: `jj undo`
