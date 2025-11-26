@@ -2,9 +2,12 @@
 set -e
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-TEMP_DIR="/tmp/hanlho-plugins-local-$$"
+TEMP_DIR="/tmp/hanlho-plugins-local"
 
 echo "🔧 Creating local marketplace copy in temp directory..."
+
+# 0. Clean up old temp directory if it exists
+rm -rf "$TEMP_DIR"
 
 # 1. Create temp directory structure
 mkdir -p "$TEMP_DIR/.claude-plugin"
