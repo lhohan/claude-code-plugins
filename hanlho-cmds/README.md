@@ -56,6 +56,52 @@ The command will:
 - Intelligent splitting maintains narrative flow
 - Suggestions help optimize message pacing and readability
 
+#### `/hanlho-cmds:build <task-file-or-description>`
+
+Structured multi-phase workflow for complex tasks with mandatory analysis, design approval, implementation tracking, and reflection.
+
+**Usage:**
+
+For file-based tasks:
+```
+/hanlho-cmds:build backlog/feature-implementation.md
+```
+
+For inline task descriptions:
+```
+/hanlho-cmds:build Implement user authentication with JWT tokens
+```
+
+This expands to a comprehensive workflow including:
+- **Phase 1: Task Analysis** - Understand and confirm requirements before proceeding
+- **Phase 2: Solution Design** - Propose approach and get approval before implementation
+- **Phase 3: Implementation** - Execute with progress tracking and testing
+- **Phase 4: Review** - Critical self-review for quality and maintainability
+- **Phase 5: Submit** - Create commits following project conventions
+- **Phase 6: Iterate** - Optional refinement cycles
+- **Phase 7: Reflect** - Capture learnings and propose improvements
+- **Phase 8: Clean Up** - Archive work and push changes
+
+**When to use this:**
+- Complex multi-step tasks requiring careful planning
+- Features that need design discussion before implementation
+- Tasks where you want enforced approval gates before coding
+- Work that benefits from structured reflection and learning capture
+- Large refactorings or architectural changes
+
+**When NOT to use this:**
+- Simple bug fixes with obvious solutions
+- Tasks that can be completed in under 15 minutes
+- Quick exploratory work or prototyping
+- When you just want immediate feedback on code
+
+**Why use this?**
+- Prevents premature implementation through mandatory analysis phase
+- Creates audit trail via notes files for session continuity
+- Enforces testing, documentation, and reflection
+- Captures learnings to improve future workflows
+- Structured phases ensure nothing is missed (analysis, design, review, reflection)
+
 ## Installation
 
 ### From Local Marketplace
