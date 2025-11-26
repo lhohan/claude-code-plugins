@@ -37,7 +37,11 @@ done
 
 # 5. Add temp marketplace to Claude Code
 echo "📦 Adding temporary marketplace to Claude Code..."
-claude plugin marketplace add "$TEMP_DIR" || echo "⚠️  Marketplace may already exist"
+if claude plugin marketplace add "$TEMP_DIR" 2>/dev/null; then
+  echo "✓ Marketplace added"
+else
+  echo "ℹ️  Marketplace already exists (will update plugins)"
+fi
 
 # 6. Install plugins from temp location
 echo "📥 Installing plugins from temporary marketplace..."
